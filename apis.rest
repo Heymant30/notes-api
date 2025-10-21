@@ -18,3 +18,50 @@ Content-Type: application/json
     "email": "hemant2@gmail.com",
     "password": "Hemant@1430"
 }
+
+###
+
+POST http://localhost:3000/api/notes/createNotes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoiaGVtYW50MkBnbWFpbC5jb20iLCJpYXQiOjE3NjEwMjk3NzQsImV4cCI6MTc2MTAzMDM3NH0.rhGauNTWujVJ4ICNqZF9hvL5wzPY3QFIFDubuKhZ1eU
+
+{
+    "title": "Note 2",
+    "body": "this is note 2"
+}
+
+###
+GET http://localhost:3000/api/notes/getNotes?skip=0&take=2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoiaGVtYW50MkBnbWFpbC5jb20iLCJpYXQiOjE3NjEwNjk3ODMsImV4cCI6MTc2MTA3MDM4M30.T8CXwQmXfxfkQFcioDdP_FCfGELobG9gH99Ts5X4dEc
+
+# {
+#     "email": "hemant2@gmail.com",
+#     "password": "Hemant@1430"
+# }
+
+
+###
+POST http://localhost:3000/api/deleteNotes
+Content-Type: application/json
+
+{
+    "email": "hemant2@gmail.com",
+    "password": "Hemant@1430"
+}
+
+###
+PATCH http://localhost:3000/api/notes/updateNote/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoiaGVtYW50MkBnbWFpbC5jb20iLCJpYXQiOjE3NjEwNjk0MDQsImV4cCI6MTc2MTA3MDAwNH0.g0zS0jwaE7XFABc4-Pt1syWApTmlrjJvw9Lh9Hc6evc
+
+{
+    "title": "Note 4",
+    "body": "this is note 4"
+}
+
+###
+
+DELETE  http://localhost:3000/api/notes/deleteNote/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoiaGVtYW50MkBnbWFpbC5jb20iLCJpYXQiOjE3NjEwNjk3ODMsImV4cCI6MTc2MTA3MDM4M30.T8CXwQmXfxfkQFcioDdP_FCfGELobG9gH99Ts5X4dEc
